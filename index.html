@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/TP2/public/css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    /*IMPORT ET CLASS POLICE*/
+    @import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    .rokkit {
+        font-family: "Rokkitt", serif;
+    }
+
+    .roboto {
+        font-family: "Roboto", sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body class="bg-white min-h-screen overflow-x-hidden">
+    <!--HOME SEC-->
+    <section id="home" class="relative w-full overflow-hidden min-h-[65svh] md:min-h-[100svh]">
+        <div
+            class="absolute inset-0 -z-10 bg-[url('/TP2/public/images/bg_header.jpg')] bg-no-repeat bg-cover bg-[position:50%_15%] md:bg-center">
+        </div>
+        <nav class="flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="/TP2/public/images/your_logo.png"
+                    class="mt-10 ml-[3.75rem] w-28 sm:ml-[5rem] md:ml-[12.5rem] sm:w-32" alt="logo">
+                <span class="text-2xl text-black mt-10 ml-2">LOGO</span>
+            </div>
+            <button id="burgerBtn" class="mt-10 mr-[1.25rem] sm:mr-[5rem] md:mr-[15rem]">
+                <i class="fa-solid fa-bars text-black text-3xl"></i>
+            </button>
+        </nav>
+        <div class="px-4 mt-6 pb-10 flex flex-col items-center text-center gap-6">
+            <h1 class="text-white text-4xl mt-8 rokkit">In the hall of the</h1>
+            <span class="text-white font-bold text-5xl sm:text-6xl rokkit">Mountain King</span>
+            <p class="text-white/75 max-w-[38rem] mt-6 roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Eveniet nihil non sapiente blanditiis doloribus inventore incidunt maiores.</p>
+            <div class="flex gap-1 mt-10">
+                <a class="bg-cyan-400 px-5 py-3 text-white roboto font-light">Learn More</a>
+                <a class="bg-rose-500 px-5 py-3 text-white roboto font-light">Download</a>
+            </div>
+        </div>
+    </section>
+    <!--MENU LEFT-->
+    <aside id="mobileMenu"
+        class="fixed inset-y-0 left-0 w-72 max-w-[85%] bg-neutral-900 text-gray-100 shadow-2xl -translate-x-full transition-transform duration-300 z-[70]">
+        <div class="flex items-center justify-between h-16 px-4 border-b border-white/10">
+            <span class="text-xl font-semibold rokkit">The Mountain</span>
+            <button id="closeMenu" class="p-2 rounded hover:bg-white/10" aria-label="Close menu">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        <nav class="py-2">
+            <ul id="menuList" class="px-2 divide-y divide-white/10"></ul>
+        </nav>
+    </aside>
+    <!--FEATURES SEC-->
+    <section id="features" class="py-12 md:py-20">
+        <div class="mx-auto max-w-[1200px] px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-y-0 md:gap-x-10">
+                <div class="flex flex-col items-center text-center">
+                    <i class="fa-solid fa-pencil text-6xl text-[#8C8888]"></i>
+                    <h3 class="rokkit mt-6 text-2xl text-[#615858] font-medium">Consectetur Risus</h3>
+                    <p class="roboto mt-4 text-[#8C8888] max-w-[32ch]">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Enim, repellendus?</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fa-solid fa-camera text-6xl text-[#8C8888]"></i>
+                    <h3 class="rokkit mt-6 text-2xl text-[#615858] font-medium">Ultricies Aenean</h3>
+                    <p class="roboto mt-4 text-[#8C8888] max-w-[32ch]">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Laudantium, voluptatibus?</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <i class="fa-solid fa-bookmark text-6xl text-[#8C8888]"></i>
+                    <h3 class="rokkit mt-6 text-2xl text-[#615858] font-medium">Cras Sollicitudin</h3>
+                    <p class="roboto mt-4 text-[#8C8888] max-w-[32ch]">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Voluptatem, optio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ABOUT SEC-->
+    <section id="about" class="w-full h-[500px] relative">
+        <div
+            class="bg-[url('/TP2/public/images/bg_nuage.jpg')] w-full h-[500px] bg-cover bg-center bg-no-repeat absolute z-[-1]">
+        </div>
+        <div class="flex justify-end w-full h-full">
+            <div class="flex flex-col justify-between bg-sky-300/50 w-120 ml-5 mr-5 md:mr-30 h-[500px] pb-5">
+                <div class="pt-10 pl-10 pr-10">
+                    <h2 class="text-white text-4xl mb-6 rokkit">Lorem ipsum dolor<br>sitead.</h2>
+                    <span class="text-white text-2xl text-left rokkit">Lorem ipsum dolor sit amet.</span>
+                    <span class="text-white/90 text-left mt-8 roboto">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Omni dignissimos nostrum cum perspiciatis, voluptatum officiis? Lorem ipsum dolor sit
+                        amet.</span>
+                </div>
+                <div class="w-100 h-40 ml-10 mb-4">
+                    <div class="grid grid-cols-2 gap-20 md:mt-4 h-full">
+                        <div class="row-start-1 row-end-4 flex justify-center" style="border: solid 1px white;">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="text-white rokkit text-2xl">Ultricies</div>
+                                <div class="text-white text-2xl mt-4">23,578</div>
+                            </div>
+                        </div>
+                        <div class="row-start-1 row-end-4 flex justify-center" style="border: solid 1px white;">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="text-white text-2xl rokkit">Fermemtum</div>
+                                <div class="text-white text-2xl mt-4">12,702</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--BLOG SEC-->
+    <section id="blog" class="w-full mt-10 pb-4">
+        <div class="mx-auto max-w-[1200px] px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="order-1">
+                    <h1 class="rokkit text-[#333] font-medium leading-tight text-3xl sm:text-4xl md:text-5xl">Lorem
+                        ipsum dolor sit amet consectetur adipiscing elit.</h1>
+                    <p class="text-[#6f6f6f] roboto mt-4">Duis mollis, est non commodo luctus, nisi erat porttitor
+                        ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit…</p>
+                    <p class="text-[#6f6f6f] roboto mt-4">Donec id elit non mi porta gravida at eget metus. Integer
+                        posuere erat a ante venenatis dapibus posuere velit aliquet…</p>
+                    <a href="#" class="mt-5 inline-flex items-center gap-2 bg-rose-500 text-white px-5 py-3 w-fit">Take
+                        a Look <i class="fa-solid fa-circle-arrow-right text-sm"></i></a>
+                    <img src="/TP2/public/images/1200.jpeg" alt="Blog visual"
+                        class="mt-4 w-full h-56 sm:h-72 object-cover md:hidden" />
+                </div>
+                <div class="hidden md:flex justify-end order-2"><img src="/TP2/public/images/1200.jpeg"
+                        alt="Blog visual" class="w-[400px] h-[340px] object-cover rounded" /></div>
+            </div>
+        </div>
+    </section>
+    <!--HISTORY SEC-->
+    <section id="history" class="relative w-full h-[500px] overflow-hidden">
+        <div
+            class="absolute inset-0 -z-10 bg-[url('/TP2/public/images/bg_appareil_photo.jpg')] bg-cover bg-center bg-no-repeat">
+        </div>
+        <div class="flex items-stretch w-full h-full">
+            <div class="bg-sky-300/50 backdrop-blur-sm w-[30rem] ml-5 mr-5 md:ml-[7.5rem] h-full">
+                <div class="p-10">
+                    <h2 class="text-white text-3xl mb-6 rokkit italic font-extralight">Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Neque, libero.</h2>
+                    <span class="text-white/90 block roboto italic font-extralight">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit… Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                        repellendus voluptates natus ratione dolor illum, quibusdam sit. Sequi, quibusdam qui minima
+                        consectetur repudiandae veniam pariatur, blanditiis quas molestiae laboriosam quisquam?</span>
+                    <h2 class="text-white text-3xl mb-6 rokkit italic font-extralight mt-6">- Lorem ipsum</h2>
+                    <span class="text-white/90 block roboto font-light">Lorem ipsum dolor sit amet</span>
+                    <span class="text-white/90 block roboto font-light">Lorem ipsum dolor sit amet consectetur
+                        adipisicing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--PHOTOS SEC-->
+    <section id="photos" class="w-full bg-[#E0E0E0] pt-10 pb-10">
+        <section class="mx-auto max-w-[1200px] p-4]">
+            <div class="grid gap-4 auto-rows-[120px] grid-cols-1 lg:grid-cols-3 lg:auto-rows-[160px]">
+                <div
+                    class="bg-[url('/TP2/public/images/300.jpeg')] bg-cover bg-center flex items-center justify-center row-span-2 lg:col-start-1 lg:col-span-2 lg:row-start-1 lg:row-span-2">
+                </div>
+                <div
+                    class="bg-[url('/TP2/public/images/776.jpeg')] bg-cover bg-center flex items-center justify-center row-span-5 lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-5">
+                </div>
+                <div
+                    class="bg-[url('/TP2/public/images/800.jpeg')] bg-cover bg-center flex items-center justify-center row-span-4 lg:col-start-1 lg:col-span-1 lg:row-start-3 lg:row-span-4">
+                </div>
+                <div
+                    class="bg-[url('/TP2/public/images/400.jpeg')] bg-cover bg-center flex items-center justify-center row-span-3 lg:col-start-2 lg:col-span-1 lg:row-start-3 lg:row-span-3">
+                </div>
+                <div
+                    class="bg-[url('/TP2/public/images/2476.jpeg')] bg-cover bg-center flex items-center justify-center row-span-1 lg:col-start-2 lg:col-span-1 lg:row-start-6 lg:row-span-1">
+                </div>
+                <div
+                    class="bg-[url('/TP2/public/images/140.jpeg')] bg-cover bg-center flex items-center justify-center row-span-1 lg:col-start-1 lg:col-span-2 lg:row-start-7 lg:row-span-1">
+                </div>
+                <div
+                    class="bg-[url('/TP2/public/images/439.jpeg')] bg-cover bg-center flex items-center justify-center row-span-2 lg:col-start-3 lg:col-span-1 lg:row-start-6 lg:row-span-2">
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--PARTNER SEC-->
+    <section id="partenaires" class="w-full">
+        <div class="mx-auto max-w-[1200px] px-4 py-10">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-16 gap-y-10 place-items-center">
+                <div class="flex h-16 md:h-20 items-center justify-center opacity-80 hover:opacity-100 transition"><img
+                        src="/TP2/public/images/logo-sample-01.jpg" alt="Advantage"
+                        class="max-h-full w-auto object-contain"></div>
+                <div class="flex h-16 md:h-20 items-center justify-center opacity-80 hover:opacity-100 transition"><img
+                        src="/TP2/public/images/logo-sample-02.jpg" alt="Company 1"
+                        class="max-h-full w-auto object-contain"></div>
+                <div class="flex h-16 md:h-20 items-center justify-center opacity-80 hover:opacity-100 transition"><img
+                        src="/TP2/public/images/logo-sample-03.png" alt="Sample"
+                        class="max-h-full w-auto object-contain"></div>
+                <div class="flex h-16 md:h-20 items-center justify-center opacity-80 hover:opacity-100 transition"><img
+                        src="/TP2/public/images/logo-sample-04.jpg" alt="Parallon"
+                        class="max-h-full w-auto object-contain"></div>
+                <div class="flex h-16 md:h-20 items-center justify-center opacity-80 hover:opacity-100 transition"><img
+                        src="/TP2/public/images/logo-sample-05.jpg" alt="Company 2"
+                        class="max-h-full w-auto object-contain"></div>
+                <div class="flex h-16 md:h-20 items-center justify-center opacity-80 hover:opacity-100 transition"><img
+                        src="/TP2/public/images/logo-sample-06.png" alt="Squarespace"
+                        class="max-h-full w-auto object-contain"></div>
+            </div>
+        </div>
+    </section>
+    <!--CONTACT SEC-->
+    <section id="contact" class="relative w-full overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-[url('/TP2/public/images/bg_newsletter.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 backdrop-blur-md bg-black/30"></div>
+        </div>
+        <div class="relative mx-auto max-w-[1200px] px-4 py-12 md:py-20">
+            <div class="max-w-lg">
+                <h2 class="text-white text-3xl md:text-4xl leading-tight font-semibold rokkit">Maecenas sed diam eget
+                    risus varius Lorem, ipsum.</h2>
+                <p class="text-white/85 mt-4 roboto">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+                    vestibulum.Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna,vel
+                    scelerisque nisl consectetur et.</p>
+                <form class="mt-6 max-w-md space-y-3" action="#" method="post">
+                    <label for="nl-email" class="sr-only">Your email</label>
+                    <input id="nl-email" type="email" required placeholder="Your Email Here..."
+                        class="w-full px-4 py-3 bg-white text-gray-900 placeholder-gray-500 shadow focus:outline-none focus:ring-2 focus:ring-pink-500" />
+                    <button type="submit"
+                        class="inline-flex items-center px-5 py-3 bg-pink-600 hover:bg-pink-700 text-white font-medium shadow">Submit
+                        Newsletter</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="bg-[#23343a] text-white border-t border-white/10">
+        <div class="mx-auto max-w-[1200px] px-4 py-10">
+            <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+                <div>
+                    <h3 class="rokkit text-3xl md:text-4xl font-semibold">Your Logo</h3>
+                    <p class="text-white/80 mt-3 leading-relaxed">&copy; 2016 Your Company. Designed and<br
+                            class="hidden sm:block">Developed by <a href="#"
+                            class="text-teal-300 hover:text-teal-200 underline-offset-4 hover:underline">The Maitre jet
+                            d'ail</a></p>
+                </div>
+                <ul class="flex justify-center md:justify-end gap-3">
+                    <li>
+                        <a href="#" aria-label="Facebook"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full border border-white/30 text-white/90 hover:text-teal-300 hover:border-teal-400 hover:bg-teal-400/10 transition"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Twitter"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full border border-white/30 text-white/90 hover:text-teal-300 hover:border-teal-400 hover:bg-teal-400/10 transition"><i
+                                class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Tumblr"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full border border-white/30 text-white/90 hover:text-teal-300 hover:border-teal-400 hover:bg-teal-400/10 transition"><i
+                                class="fa-brands fa-tumblr"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Dribbble"
+                            class="w-10 h-10 inline-flex items-center justify-center rounded-full border border-white/30 text-white/90 hover:text-teal-300 hover:border-teal-400 hover:bg-teal-400/10 transition"><i
+                                class="fa-brands fa-dribbble"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="/TP2/public/js/burger-menu.js"></script>
+    <script defer src="/TP2/public/js/inject-navbar.js"></script>
+</body>
+
+</html>
